@@ -3,3 +3,7 @@ http://quanticalabs.com/template/medicenter-responsive-medical-health-template/i
 Pioneers of Medical Hair Regrowth & Anti-Ageing Treatment
 
 http://tvacha.com/
+
+	
+ "https://graph.facebook.com/v2.12/laserestheticsin/posts?fields=message%2Cfull_picture%2Ccreated_time%2Cpermalink_url&limit=50&access_token=118432768771020%7Cmh-L-PRzYQvadbnporp3_f74Kp8"
+
