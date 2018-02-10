@@ -11,7 +11,7 @@
   <meta name="author" content="ThemeMascot" />
 
   <!-- Page Title -->
-  <title>Medinova - Health & Medical HTML Template</title>
+  <title>Laser Esthetics.</title>
 
   <!-- Favicon and Touch Icons -->
   <link href="images/favicon.png" rel="shortcut icon" type="image/png">
@@ -122,25 +122,27 @@
           <ul>
             <li class="font-14 mb-5">
               <i class="fa fa-phone text-theme-colored"></i>
-              <a href="#" class="text-gray">123-456-789</a>
+              <a href="#" class="text-gray">+91 9717721011</a>
             </li>
             <li class="font-14 mb-5">
-              <i class="fa fa-clock-o text-theme-colored"></i> Mon-Fri 8:00 to 2:00 </li>
+              <i class="fa fa-clock-o text-theme-colored"></i> Mon-Fri 9:00 to 20:00 </li>
+              <li class="font-14 mb-5">
+                  <i class="fa fa-clock-o text-theme-colored"></i> Sat-Sun 10:00 to 18:00 </li>
             <li class="font-14 mb-5">
               <i class="fa fa-envelope-o text-theme-colored"></i>
-              <a href="#" class="text-gray">contact@yourdomain.com</a>
+              <a href="#" class="text-gray">laseresthetics01@gmail.com</a>
             </li>
           </ul>
         </div>
         <div class="widget">
           <ul class="social-icons icon-dark icon-theme-colored icon-sm">
             <li>
-              <a href="#">
+              <a href="https://plus.google.com/u/0/110297521736108081070">
                 <i class="fa fa-google-plus"></i>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="https://www.facebook.com/laserestheticsin">
                 <i class="fa fa-facebook"></i>
               </a>
             </li>
@@ -151,7 +153,7 @@
             </li>
           </ul>
         </div>
-        <p>Copyright &copy;2016 ThemeMascot</p>
+        <p>Copyright &copy;2018 Laser Esthetics. All Rights Reserved</p>
       </div>
     </div>
   </div>
@@ -173,12 +175,12 @@
               <div class="widget no-border m-0">
                 <ul class="social-icons icon-dark icon-theme-colored icon-sm sm-text-center">
                   <li>
-                    <a href="#">
+                    <a href="https://www.facebook.com/laserestheticsin">
                       <i class="fa fa-facebook"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="https://plus.google.com/u/0/110297521736108081070">
                       <i class="fa fa-twitter"></i>
                     </a>
                   </li>
@@ -200,13 +202,15 @@
                 <ul class="list-inline pull-right flip sm-pull-none sm-text-center mt-5">
                   <li class="m-0 pl-10 pr-10">
                     <i class="fa fa-phone text-white"></i>
-                    <a class="text-white" href="#">123-456-789</a>
+                    <a class="text-white" href="#">+91 9717721011</a>
                   </li>
                   <li class="text-white m-0 pl-10 pr-10">
-                    <i class="fa fa-clock-o text-white"></i> Mon-Fri 8:00 to 2:00 </li>
+                    <i class="fa fa-clock-o text-white"></i> Mon-Fri 9:00 to 20:00 | 
+                    <i class="fa fa-clock-o text-white"></i> Sat-Sun 10:00 to 18:00
+                  </li>
                   <li class="m-0 pl-10 pr-10">
                     <i class="fa fa-envelope-o text-white"></i>
-                    <a class="text-white" href="#">contact@yourdomain.com</a>
+                    <a class="text-white" href="#">laseresthetics01@gmail.com</a>
                   </li>
                   <li class="sm-display-block mt-sm-10 mb-sm-10">
                     <!-- Modal: Appointment Starts -->
@@ -1022,178 +1026,137 @@
           <div class="section-title text-center">
             <div class="row">
               <div class="col-md-8 col-md-offset-2">
-                <h2 class="text-uppercase mt-0">News</h2>
+                <h2 class="text-uppercase mt-0">Social Media</h2>
                 <div class="title-icon">
                   <img class="mb-10" src="images/title-icon.png" alt="">
                 </div>
-                <p>Our news feeds.</p>
+                <p>Latest social media feeds.</p>
               </div>
             </div>
           </div>
           <!-- Portfolio Gallery Grid -->
           <div class="section-content">
-            <div id="grid" class="gallery-isotope grid-3 masonry gutter clearfix">
-              <div class="gallery-item photography design" ng-repeat="item in TopNewsFeeds">
-                <div class="thumb">
-                  <img class="img-fullwidth" src='{{item.full_picture}}' alt="project">
-                  <div class="overlay-shade"></div>
-                  <div class="icons-holder">
-                    <div class="icons-holder-inner">
-                      <div class="social-icons icon-sm icon-dark icon-circled icon-theme-colored">
-                        <a href="{{item.permalink_url}}" target="_blank">
-                          <i class="fa fa-link"></i>
-                        </a>
+            <div class="row multi-row-clearfix">
+              <div class="blog-posts">
+                <div ng-repeat="item in TopSocialMediaFeeds" class="col-xs-12 col-sm-12 col-md-6 wow fadeInLeft animation-delay1" style="visibility: visible;">
+                  <article class="post style1 clearfix maxwidth500">
+                    <div class="col-md-4 p-0">
+                      <div class="entry-header">
+                        <div class="post-thumb">
+                          <img src="{{item.full_picture}}" alt="" class="img-responsive img-fullwidth">
+                        </div>
+                        <div class="entry-date entry-date-absolute">
+                          {{item.created_time | date:'dd'}}
+                          <span> {{item.created_time | date:'MMM'}}</span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <!-- <a class="hover-link" data-lightbox="image" href="{{item.full_picture}}">View more</a> -->
+                    <div class="col-md-8 p-0">
+                      <div class="entry-content pl-50 p-20 pt-30 pr-20">
+                        <h5 ng-if="item.message" class="entry-title pt-0">
+                          <a href="{{item.permalink_url}}" target="_blank">{{item.message | truncate : 20}}</a>
+                        </h5>
+                        <p ng-if="item.message">{{item.message | truncate : 300}}</p>
+                        <h5 ng-if="!item.message" class="entry-title pt-0">
+                          <a href="{{item.permalink_url}}" target="_blank">Pulished on.</a>
+                        </h5>
+                        <p ng-if="!item.message">{{item.created_time | date:'fullDate'}}</p>
+
+                        <a class="text-theme-colored mt-10 mb-0 pull-right flip" href="{{item.permalink_url}}" target="_blank">Read more
+                          <i class="fa fa-angle-double-right"></i>
+                        </a>
+                        <div class="clearfix"></div>
+                      </div>
+                    </div>
+                  </article>
                 </div>
-                <div class="portfolio-description">
-                  <h5 class="title">
-                    <a href="{{item.permalink_url}}" target="_blank">{{item.created_time | date:'fullDate'}}</a>
-                  </h5>
-                  <span ng-if="item.message" class="category">
-                    <span>{{item.message | truncate : 200}}</span>
-                  </span>
-                </div>
+
               </div>
             </div>
+
       </section>
       </div>
       <!-- end main-content -->
 
       <!-- Footer -->
-      <footer class="footer p-0 bg-solid-color bg-black-111">
-        <div class="container">
-          <div class="row">
-            <div class="footer-box-wrapper equal-height">
-              <div class="col-sm-4 footer-box-one pr-0 pl-sm-0">
-                <div class="footer-box icon-box media">
-                  <a href="#" class="media-left pull-left mr-30 mr-sm-15">
-                    <i class=" icon-ambulance14 text-white"></i>
-                  </a>
-                  <div class="media-body">
-                    <h4 class="media-heading heading title">24 Hours Service</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      <a href="#">
-                        <i class="fa fa-arrow-circle-right font-14"></i>
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-4 footer-box-two pl-0 pr-0">
-                <div class="footer-box icon-box media">
-                  <a href="#" class="media-left pull-left mr-30 mr-sm-15">
-                    <i class="fa fa-comments-o text-white"></i>
-                  </a>
-                  <div class="media-body">
-                    <h4 class="media-heading heading title">Online Help</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      <a href="#">
-                        <i class="fa fa-arrow-circle-right font-14"></i>
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-4 footer-box-three pl-0 pr-sm-0">
-                <div class="footer-box icon-box media">
-                  <a href="#" class="media-left pull-left mr-30 mr-sm-15">
-                    <i class=" fa fa-credit-card text-white"></i>
-                  </a>
-                  <div class="media-body">
-                    <h4 class="media-heading heading title">Online Payment</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      <a href="#">
-                        <i class="fa fa-arrow-circle-right font-14"></i>
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row equal-height">
-            <div class="col-sm-4 col-md-3 border-right-black sm-height-auto">
-              <div class="widget dark pt-120 pb-30 maxwidth400 sm-text-center">
-                <h5 class="widget-title">Our Services</h5>
-                <ul>
+      <footer id="footer" class="footer pb-0" data-bg-img="images/footer-bg.png" data-bg-color="#25272e">
+        <div class="container pb-20">
+          <div class="row multi-row-clearfix">
+            <div class="col-sm-6 col-md-3">
+              <div class="widget dark">
+                <img class="mb-20" src="images/apple-touch-icon-72x72.png" width="40" height="40">
+                <span style="color: white;font-size: 20px;margin-bottom:3px;">
+                  <strong>Laser Esthetics</strong>
+                </span>
+                <p class="font-12 mt-20 mb-10">We encourage a strong emotional bond between one's mind and body! We believe, from the bottom of our hearts,
+                  that unless your mind falls seamlessly in love with your body, it hardly will fight for its resurgence.
+                  We also strongly believe that well-trained medical personnel must be backed-up by the state-of- the-art
+                  technology.
+                </p>
+                <ul class="social-icons icon-dark mt-20">
                   <li>
-                    <a href="#">Laser Hair Removal</a>
+                    <a href="https://www.facebook.com/laserestheticsin" data-bg-color="#3B5998">
+                      <i class="fa fa-facebook"></i>
+                    </a>
                   </li>
                   <li>
-                    <a href="#">Acne / Scars Treatment</a>
+                    <a href="#" data-bg-color="#02B0E8">
+                      <i class="fa fa-twitter"></i>
+                    </a>
                   </li>
                   <li>
-                    <a href="#">Stretch Marks Removal</a>
+                    <a href="#" data-bg-color="#05A7E3">
+                      <i class="fa fa-skype"></i>
+                    </a>
                   </li>
                   <li>
-                    <a href="#">Chemical Peeling</a>
+                    <a href="https://plus.google.com/u/0/110297521736108081070" data-bg-color="#A11312">
+                      <i class="fa fa-google-plus"></i>
+                    </a>
                   </li>
                   <li>
-                    <a href="#">Mole Treatment</a>
-                  </li>
-                  <li>
-                    <a href="#">Anti-Ageing Treatment</a>
+                    <a href="#" data-bg-color="#C22E2A">
+                      <i class="fa fa-youtube"></i>
+                    </a>
                   </li>
                 </ul>
               </div>
             </div>
-            <div class="col-sm-4 col-md-6 text-center border-right-black sm-height-auto">
-              <div class="footer-widget pt-70 pl-60 pr-60 pt-sm-10 pl-sm-10 pr-sm-10 maxwidth400 sm-text-center">
-                <div class="footer-logo border-bottom-dot-1px pb-30">
-                  <img class="mb-20" src="images/apple-touch-icon-72x72.png" alt="">
-                  <span style="color: white;font-size: 30px">
-                    <strong>Laser Esthetics</strong>
-                  </span>
-                  <p>We encourage a strong emotional bond between one's mind and body! We believe, from the bottom of our hearts,
-                    that unless your mind falls seamlessly in love with your body, it hardly will fight for its resurgence.
-                    We also strongly believe that well-trained medical personnel must be backed-up by the state-of- the-art
-                    technology.
-                  </p>
-                </div>
-                <div class="footer-news-letter mt-30">
-                  <h4 class="text-white mb-30">Subscribe Our Newsletter</h4>
-                  <form id="footer-mailchimp-subscription-form" class="newsletter-form mt-10">
-                    <label class="display-block" for="mce-EMAIL"></label>
-                    <div class="input-group">
-                      <input type="email" value="" name="EMAIL" placeholder="Your Email" class="form-control" data-height="37px" id="mce-EMAIL">
-                      <span class="input-group-btn">
-                        <button type="submit" class="btn btn-colored btn-theme-colored m-0">
-                          <i class="fa fa-paper-plane-o text-white"></i>
-                        </button>
-                      </span>
-                    </div>
-                  </form>
-                  <!-- Mailchimp Subscription Form Validation-->
-                  <script type="text/javascript">
-                    $('#footer-mailchimp-subscription-form').ajaxChimp({
-                      callback: mailChimpCallBack,
-                      url: '//thememascot.us9.list-manage.com/subscribe/post?u=a01f440178e35febc8cf4e51f&amp;id=49d6d30e1e'
-                    });
-
-                    function mailChimpCallBack(resp) {
-                      // Hide any previous response text
-                      var $mailchimpform = $('#footer-mailchimp-subscription-form'),
-                        $response = '';
-                      $mailchimpform.children(".alert").remove();
-                      console.log(resp);
-                      if (resp.result === 'success') {
-                        $response = '<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + resp.msg + '</div>';
-                      } else if (resp.result === 'error') {
-                        $response = '<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + resp.msg + '</div>';
-                      }
-                      $mailchimpform.prepend($response);
-                    }
-                  </script>
+            <div class="col-sm-6 col-md-3">
+              <div class="widget dark">
+                <h5 class="widget-title line-bottom">Photos from Facebook</h5>
+                <div  id="flickr-feed" class="clearfix">
+                  <div ng-repeat="item in PhotosFacebook" class="flickr_badge_image" >
+                    <a href="{{item.link}}" target="_blank" >
+                      <img src="{{item.picture}}" alt="Added on {{item.created_time | date : 'fullDate'}" title="{{item.name}}"
+                        height="75" width="75">
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-sm-4 col-md-3 sm-height-auto">
-              <div class="widget dark text-right sm-text-center pt-120 pb-140 pt-xs-40 pb-xs-0 maxwidth400">
-                <h5 class="widget-title">Quick Contact</h5>
-                <ul>
+            <div class="col-sm-6 col-md-3">
+              <div class="widget dark">
+                <h5 class="widget-title line-bottom">Latest News</h5>
+                <div class="latest-posts">
+                  <article ng-repeat="item in TopNewsFeeds" class="post media-post clearfix pb-0 mb-10">
+                    <a class="post-thumb" href="#">
+                      <img src="{{item.picture}}" width="80" height="55" alt="">
+                    </a>
+                    <div class="post-right">
+                      <h5 class="post-title mt-0 mb-5">
+                        <a href="{{item.link}}" target="_blank">{{item.name  | truncate : 45}}</a>
+                      </h5>
+                      <p class="post-date mb-0 font-12">{{item.created_time | date : 'fullDate'}}</p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="widget dark">
+                <h5 class="widget-title line-bottom">Quick Contact</h5>
+                <ul class="list list-border">
                   <li>
                     <a href="#">+91 9717721011</a>
                   </li>
@@ -1204,66 +1167,31 @@
                     <a href="#" class="lineheight-20">A-172 Dlf NTH sector 86 Gurgaon, Haryana</a>
                   </li>
                 </ul>
-                <ul class="social-icons icon-gray icon-circled icon-sm pull-right sm-pull-none sm-text-center mt-sm-15">
-                  <li class="wow fadeInRight" data-wow-delay=".1s">
-                    <a href="https://www.facebook.com/laserestheticsin">
-                      <i class="fa fa-facebook"></i>
-                    </a>
-                  </li>
-                  <li class="wow fadeInRight" data-wow-delay=".2s">
-                    <a href="#">
-                      <i class="fa fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li class="wow fadeInRight" data-wow-delay=".3s">
-                    <a href="https://plus.google.com/u/0/110297521736108081070">
-                      <i class="fa fa-google-plus"></i>
-                    </a>
-                  </li>
-                  <li class="wow fadeInRight" data-wow-delay=".4s">
-                    <a href="#">
-                      <i class="fa fa-instagram"></i>
-                    </a>
-                  </li>
-                  <li class="wow fadeInRight" data-wow-delay=".5s">
-                    <a href="#">
-                      <i class="fa fa-linkedin"></i>
-                    </a>
-                  </li>
-                </ul>
+                <p class="text-white mb-5 mt-15">Subscribe to our newsletter</p>
+                <form id="mailchimp-subscription-form" class="newsletter-form mt-10">
+                  <div class="input-group">
+                    <input type="email" value="" name="EMAIL" placeholder="Your Email" class="form-control" data-height="37px" id="mce-EMAIL">
+                    <span class="input-group-btn">
+                      <button type="submit" class="btn btn-colored btn-theme-colored m-0">
+                        <i class="fa fa-paper-plane-o text-white"></i>
+                      </button>
+                    </span>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
         </div>
-        <div class="footer-nav bg-black-222 p-20">
-          <div class="container pt-20 pb-0">
-            <div class="row">
-              <div class="col-md-12">
-                <p class="font-11 pull-left mb-sm-15 sm-text-center sm-pull-none">Copyright &copy;2018 Laser Esthetics. All Rights Reserved</p>
-                <div class="widget m-0">
-                  <ul class="font-11 pull-right text-right list-inline sm-text-center sm-pull-none">
-                    <li>
-                      <a href="#">Home</a>
-                    </li>
-                    <li>/</li>
-                    <li>
-                      <a href="#">Services</a>
-                    </li>
-                    <li>/</li>
-                    <li>
-                      <a href="#">About</a>
-                    </li>
-                    <li>/</li>
-                    <li>
-                      <a href="#">News</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+        <div class="container-fluid bg-theme-colored p-20">
+          <div class="row text-center">
+            <div class="col-md-12">
+              <p class="text-white font-11 m-0">Copyright &copy;2018 Laser Esthetics. All Rights Reserved</p>
             </div>
           </div>
         </div>
       </footer>
+
+
       <a class="scrollToTop" href="#">
         <i class="fa fa-angle-up"></i>
       </a>
