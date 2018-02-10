@@ -50,6 +50,9 @@
   <script src="js/jquery-2.2.0.min.js"></script>
   <script src="js/jquery-ui.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="js/angularsrc.js"></script>
   <!-- JS | jquery plugin collection for this theme -->
   <script src="js/jquery-plugin-collection.js"></script>
 
@@ -65,7 +68,7 @@
 <![endif]-->
 </head>
 
-<body class="has-side-panel side-panel-right fullwidth-page side-push-panel">
+<body ng-app="laserclinic" ng-controller="indexController" class="has-side-panel side-panel-right fullwidth-page side-push-panel">
   <div class="body-overlay"></div>
   <div id="side-panel" class="dark" data-bg-img="images/custom/bg3.jpg">
     <div class="side-panel-wrap">
@@ -77,7 +80,7 @@
       <a href="javascript:void(0)">
         <img alt="logo" src="images/apple-touch-icon-72x72.png">
         <span>
-          <strong>Lasaer Esthetics..</strong>
+          <strong>Lasaer Esthetics</strong>
         </span>
       </a>
       <div class="side-panel-nav mt-30">
@@ -223,7 +226,7 @@
               <a class="menuzord-brand pull-left flip" href="javascript:void(0)">
                 <img src="images/apple-touch-icon-114x114.png" alt="">
                 <span>
-                  <strong>Laser Esthetics..</strong>
+                  <strong>Laser Esthetics</strong>
                 </span>
               </a>
               <div id="side-panel-trigger" class="side-panel-trigger">
@@ -794,7 +797,7 @@
                 institute and conduct work only in dermatology.But we have established ourselves as the perfect balance between
                 aesthetic dermatology, hardcore dermatology & dermatology teaching. </p>
               <p class="mt-20">
-                <img src="images/signature.png" alt="">
+                <img src="images/custom/signature.jpg" alt="">
               </p>
             </div>
             <div class="col-md-4 wow fadeInRight animation-delay4">
@@ -1027,32 +1030,34 @@
               </div>
             </div>
           </div>
-
-          <!-- Portfolio Item End -->
+          <!-- Portfolio Gallery Grid -->
           <div class="section-content">
-            <div id="grid" class="gallery-isotope grid-4 masonry gutter clearfix">
-              <!-- Portfolio Item Start -->
-              <div class="gallery-item photography">
-                  <div class="gallery-item photography" style="position: absolute; left: 0px; top: 0px;">
-                      <div class="thumb">
-                        <img class="img-fullwidth" src="images/custom/news10.jpg" alt="project">
-                        <div class="overlay-shade"></div>
-                        <div class="icons-holder">
-                          <div class="icons-holder-inner">
-                            <div class="social-icons icon-sm icon-dark icon-circled icon-theme-colored">
-                              <a data-lightbox="image" href="images/custom/news10.jpg"><i class="fa fa-plus"></i></a>
-                            </div>
-                          </div>
-                        </div>
-                        <a class="hover-link" data-lightbox="image" href="images/custom/news10.jpg">View more</a>
-                      </div>
-                      <div class="portfolio-description">
-                        <h5 class="title"><a href="#">Sample Portfolio Title</a></h5>
-                        <span class="category"><span>Category Art</span></span>
+            <div id="grid" class="gallery-isotope grid-3 masonry gutter clearfix">
+              <div class="gallery-item photography design" ng-repeat="item in TopNewsFeeds">
+                <div class="thumb">
+                  <img class="img-fullwidth" src='{{item.full_picture}}' alt="project">
+                  <div class="overlay-shade"></div>
+                  <div class="icons-holder">
+                    <div class="icons-holder-inner">
+                      <div class="social-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                        <a href="{{item.permalink_url}}" target="_blank">
+                          <i class="fa fa-link"></i>
+                        </a>
                       </div>
                     </div>
+                  </div>
+                  <!-- <a class="hover-link" data-lightbox="image" href="{{item.full_picture}}">View more</a> -->
+                </div>
+                <div class="portfolio-description">
+                  <h5 class="title">
+                    <a href="{{item.permalink_url}}" target="_blank">{{item.created_time | date:'fullDate'}}</a>
+                  </h5>
+                  <span ng-if="item.message" class="category">
+                    <span>{{item.message | truncate : 200}}</span>
+                  </span>
+                </div>
+              </div>
             </div>
-          </div>
       </section>
       </div>
       <!-- end main-content -->
@@ -1145,7 +1150,8 @@
                   <p>We encourage a strong emotional bond between one's mind and body! We believe, from the bottom of our hearts,
                     that unless your mind falls seamlessly in love with your body, it hardly will fight for its resurgence.
                     We also strongly believe that well-trained medical personnel must be backed-up by the state-of- the-art
-                    technology.</p>
+                    technology.
+                  </p>
                 </div>
                 <div class="footer-news-letter mt-30">
                   <h4 class="text-white mb-30">Subscribe Our Newsletter</h4>
@@ -1261,25 +1267,25 @@
       <a class="scrollToTop" href="#">
         <i class="fa fa-angle-up"></i>
       </a>
-    </div>
-    <!-- end wrapper -->
+      </div>
+      <!-- end wrapper -->
 
-    <!-- Footer Scripts -->
-    <!-- JS | Custom script for all pages -->
-    <script src="js/custom.js"></script>
+      <!-- Footer Scripts -->
+      <!-- JS | Custom script for all pages -->
+      <script src="js/custom.js"></script>
 
-    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  
+      <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  
       (Load Extensions only on Local File Systems ! 
        The following part can be removed on Server for On Demand Loading) -->
-    <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.actions.min.js"></script>
-    <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.carousel.min.js"></script>
-    <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.kenburn.min.js"></script>
-    <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.layeranimation.min.js"></script>
-    <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.migration.min.js"></script>
-    <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.navigation.min.js"></script>
-    <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.parallax.min.js"></script>
-    <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.slideanims.min.js"></script>
-    <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.video.min.js"></script>
+      <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.actions.min.js"></script>
+      <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.carousel.min.js"></script>
+      <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.kenburn.min.js"></script>
+      <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.layeranimation.min.js"></script>
+      <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.migration.min.js"></script>
+      <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.navigation.min.js"></script>
+      <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.parallax.min.js"></script>
+      <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.slideanims.min.js"></script>
+      <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.video.min.js"></script>
 
 
 </body>

@@ -219,6 +219,21 @@ var THEMEMASCOT = {};
         /* ---------------------------------------------------------------------- */
         /* ----------------------------- Magnific Popup ------------------------- */
         /* ---------------------------------------------------------------------- */
+        lightbox_popup_init :function(){
+            var $mfpLightboxImage = $('[data-lightbox="image"]');
+            if( $mfpLightboxImage.length > 0 ) {
+                $mfpLightboxImage.magnificPopup({
+                    type: 'image',
+                    closeOnContentClick: true,
+                    closeBtnInside: false,
+                    fixedContentPos: true,
+                    mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+                    image: {
+                        verticalFit: true
+                    }
+                });
+            }
+        },
         TM_magnificPopup_lightbox: function() {
             
             $('.image-popup-lightbox').magnificPopup({
@@ -790,8 +805,8 @@ var THEMEMASCOT = {};
                 THEMEMASCOT.widget.TM_shopClickEvents();
                 THEMEMASCOT.widget.TM_fcCalender();
                 THEMEMASCOT.widget.TM_verticalTimeline();
-                THEMEMASCOT.widget.TM_verticalMasonryTimeline();
-                THEMEMASCOT.widget.TM_masonryIsotop();
+                // THEMEMASCOT.widget.TM_verticalMasonryTimeline();
+                // THEMEMASCOT.widget.TM_masonryIsotop();
                 THEMEMASCOT.widget.TM_pieChart();
                 THEMEMASCOT.widget.TM_progressBar();
                 THEMEMASCOT.widget.TM_funfact();
