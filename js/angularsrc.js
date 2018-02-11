@@ -23,15 +23,16 @@
             .then(function (response) {
                 $scope.TopSocialMediaFeeds = response.data.data;
             })
-            $http.get("https://graph.facebook.com/v2.12/582027878812030/photos?fields=created_time%2Cname%2Ccomments%2Clikes%2Clink%2Cpicture&limit=3&access_token=118432768771020%7Cmh-L-PRzYQvadbnporp3_f74Kp8")
+
+        $http.get("https://graph.facebook.com/v2.12/582027878812030/photos?fields=created_time%2Cname%2Ccomments%2Clikes%2Clink%2Cpicture&access_token=118432768771020%7Cmh-L-PRzYQvadbnporp3_f74Kp8")
             .then(function (response) {
-                $scope.TopNewsFeeds = response.data.data;
+                $scope.TopNewsFeeds = response.data.data.reverse();
             })
-            $http.get("https://graph.facebook.com/v2.12/582029818811836/photos?fields=created_time%2Cname%2Ccomments%2Clikes%2Clink%2Cpicture&limit=9&access_token=118432768771020%7Cmh-L-PRzYQvadbnporp3_f74Kp8")
+        $http.get("https://graph.facebook.com/v2.12/582029818811836/photos?fields=created_time%2Cname%2Ccomments%2Clikes%2Clink%2Cpicture&limit=9&access_token=118432768771020%7Cmh-L-PRzYQvadbnporp3_f74Kp8")
             .then(function (response) {
                 $scope.PhotosFacebook = response.data.data;
             })
-            
+
     }]);
 
 

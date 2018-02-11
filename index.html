@@ -204,10 +204,6 @@
                     <i class="fa fa-phone text-white"></i>
                     <a class="text-white" href="#">+91 9717721011</a>
                   </li>
-                  <li class="text-white m-0 pl-10 pr-10">
-                    <i class="fa fa-clock-o text-white"></i> Mon-Fri 9:00 to 20:00 | 
-                    <i class="fa fa-clock-o text-white"></i> Sat-Sun 10:00 to 18:00
-                  </li>
                   <li class="m-0 pl-10 pr-10">
                     <i class="fa fa-envelope-o text-white"></i>
                     <a class="text-white" href="#">laseresthetics01@gmail.com</a>
@@ -1139,7 +1135,7 @@
               <div class="widget dark">
                 <h5 class="widget-title line-bottom">Latest News</h5>
                 <div class="latest-posts">
-                  <article ng-repeat="item in TopNewsFeeds" class="post media-post clearfix pb-0 mb-10">
+                  <article ng-repeat="item in TopNewsFeeds | limitTo:3" class="post media-post clearfix pb-0 mb-10">
                     <a class="post-thumb" href="#">
                       <img src="{{item.picture}}" width="80" height="55" alt="">
                     </a>
