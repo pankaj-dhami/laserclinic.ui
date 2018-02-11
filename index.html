@@ -70,7 +70,7 @@
 
 <body ng-app="laserclinic" ng-controller="indexController" class="has-side-panel side-panel-right fullwidth-page side-push-panel">
   <div class="body-overlay"></div>
-  <div id="side-panel" class="dark" data-bg-img="images/custom/bg14.jpg">
+  <div id="side-panel" class="dark" data-bg-img="images/custom/bg6.jpg">
     <div class="side-panel-wrap">
       <div id="side-panel-trigger-close" class="side-panel-trigger">
         <a href="#">
@@ -126,8 +126,8 @@
             </li>
             <li class="font-14 mb-5">
               <i class="fa fa-clock-o text-theme-colored"></i> Mon-Fri 9:00 to 20:00 </li>
-              <li class="font-14 mb-5">
-                  <i class="fa fa-clock-o text-theme-colored"></i> Sat-Sun 10:00 to 18:00 </li>
+            <li class="font-14 mb-5">
+              <i class="fa fa-clock-o text-theme-colored"></i> Sat-Sun 10:00 to 18:00 </li>
             <li class="font-14 mb-5">
               <i class="fa fa-envelope-o text-theme-colored"></i>
               <a href="#" class="text-gray">laseresthetics01@gmail.com</a>
@@ -801,7 +801,7 @@
               </p>
             </div>
             <div class="col-md-4 wow fadeInRight animation-delay4">
-              <img src="images/custom/bptyagi.jpg" title="Dr B.P Tyagi" alt="Dr B.P Tyagi">
+              <img src="images/custom/tyagi-2.jpg" title="Dr B.P Tyagi" alt="Dr B.P Tyagi">
             </div>
           </div>
         </div>
@@ -930,7 +930,7 @@
         </div>
       </section>
       <!-- Section: Doctors -->
-      <section class="divider" data-bg-img="images/custom/bg14.jpg">
+      <section class="divider" data-bg-img="images/custom/bg21.jpg">
         <div class="container-fluid p-0">
           <div class="section-content p-90 p-sm-10">
             <div class="row">
@@ -949,8 +949,8 @@
                         <h5 class="team-subtitle text-theme-colored">Otorhinolaryngologist /Sr. Surgeon</h5>
                         <p class="team-description">M.B.B.S. (1984-1988) from Mahatma Gandhi Institute of Medical science, Sewagram, Wardha, Maharashtra,
                           (Nagpur University).
-                          <br/>M.S. (E.N.T.) {1992-1994} from Mahatma Gandhi Institute of Medical science, Sewagram, Wardha, Maharashtra,
-                          (Nagpur University).
+                          <br/>M.S. (E.N.T.) {1992-1994} from Mahatma Gandhi Institute of Medical science, Sewagram, Wardha,
+                          Maharashtra, (Nagpur University).
                           <br/>Sr. E.N.T. & Head and Neck Surgeon</p>
                         <ul class="social-icons icon-dark icon-theme-colored icon-sm m-0 mt-30">
                           <li>
@@ -987,8 +987,8 @@
                         <p class="team-description"> Dr.Niyati, Cosmetologist & Laser Physician is a pioneer in the latest trends and technologies in
                           Laser and Energy Based devices and is regularly invited as faculty to various National and International
                           conferences.
-                          <br/> She has previously worked with Sant Parmanand Hospital and Medanta- The Medicity Hospital, Currently
-                          Working with Harsh Poly Clinics and Practicing Privately as well.
+                          <br/> She has previously worked with Sant Parmanand Hospital and Medanta- The Medicity Hospital,
+                          Currently Working with Harsh Poly Clinics and Practicing Privately as well.
                         </p>
                         <ul class="social-icons icon-dark icon-theme-colored icon-sm m-0 mt-30">
                           <li>
@@ -1017,7 +1017,7 @@
         </div>
       </section>
       <!-- Section: News -->
-      <section>
+      <section data-bg-img="images/pattern/p4.png" style="background-image: url('images/pattern/p4.png');">
         <div class="container pb-110">
           <div class="section-title text-center">
             <div class="row">
@@ -1121,9 +1121,9 @@
             <div class="col-sm-6 col-md-3">
               <div class="widget dark">
                 <h5 class="widget-title line-bottom">Photos from Facebook</h5>
-                <div  id="flickr-feed" class="clearfix">
-                  <div ng-repeat="item in PhotosFacebook" class="flickr_badge_image" >
-                    <a href="{{item.link}}" target="_blank" >
+                <div id="flickr-feed" class="clearfix">
+                  <div ng-repeat="item in PhotosFacebook | limitTo:9" class="flickr_badge_image">
+                    <a href="{{item.link}}" target="_blank">
                       <img src="{{item.picture}}" alt="Added on {{item.created_time | date : 'fullDate'}" title="{{item.name}}"
                         height="75" width="75">
                     </a>
