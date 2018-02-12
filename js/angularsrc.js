@@ -19,7 +19,7 @@
     });
     app.controller('indexController', ['$scope', '$http', function ($scope, $http) {
 
-        $http.get("https://graph.facebook.com/v2.12/laserestheticsin/posts?fields=message%2Cfull_picture%2Ccreated_time%2Cpermalink_url&limit=6&access_token=118432768771020%7Cmh-L-PRzYQvadbnporp3_f74Kp8")
+        $http.get("https://graph.facebook.com/v2.12/laserestheticsin/posts?fields=message%2Cfull_picture%2Ccreated_time%2Cpermalink_url&limit=4&access_token=118432768771020%7Cmh-L-PRzYQvadbnporp3_f74Kp8")
             .then(function (response) {
                 $scope.TopSocialMediaFeeds = response.data.data;
             })

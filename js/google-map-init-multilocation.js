@@ -2,23 +2,23 @@ function initialize() {
 
     // Multiple Markers
     var markers = [
-        ['Memorial Park, Madison', 40.756945,-74.397612],
-        ['Drew University, 36 Madison Ave', 40.762926,-74.422159],
-        ['Brooklake Country Club, 139 Brooklake Rd', 40.765461,-74.378471]
+        ['A-172 DLf,Sector 86, Gurgaon', 28.401185,76.934857],
+        ['E-199, New Palam Vihar Phase -2, Gurgaon', 28.516997,77.020462],
+        ['Harsh Polyclinic Raj Nagar Extension, Ghaziabad', 28.675366,77.443550]
     ];
                         
     // Info Window Content
     var infoWindowContent = [
         ['<div class="info_content">' +
-        '<h3>London Eye</h3>' +
-        '<p>The London Eye is a giant Ferris wheel situated on the banks of the River Thames. The entire structure is 135 metres (443 ft) tall and the wheel has a diameter of 120 metres (394 ft).</p>' +        '</div>'],
+        '<h3>DLF Sector 86 center.</h3>' +
+        '<p>A-172 DLF NTH ,Sector 86 Gurgaon,Haryana.</p>' +        '</div>'],
         ['<div class="info_content">' +
-        '<h3>Palace of Westminster</h3>' +
-        '<p>The Palace of Westminster is the meeting place of the House of Commons and the House of Lords, the two houses of the Parliament of the United Kingdom. Commonly known as the Houses of Parliament after its tenants.</p>' +
+        '<h3>New Palam Viahr Center.</h3>' +
+        '<p>E-199 New Palam Vihar Phase -2, Gurgaon,Haryana.</p>' +
         '</div>'],
         ['<div class="info_content">' +
-        '<h3>Westminster Bridge</h3>' +
-        '<p>The Palace of Westminster is the meeting place of the House of Commons and the House of Lords, the two houses of the Parliament of the United Kingdom. Commonly known as the Houses of Parliament after its tenants.</p>' +
+        '<h3>Harsh Hospital.</h3>' +
+        '<p>Harsh Polyclinic Raj Nagar Extension, Ghaziabad.</p>' +
         '</div>']
     ];
 
