@@ -1,30 +1,30 @@
 var calendarEvents= [
     {
         title: 'Click for Google',
-        url: 'http://google.com/',
+        url: 'https://google.com/',
         start: '2016-01-01'
     },
     {
         title: 'Click for Google',
-        url: 'http://google.com/',
+        url: 'https://google.com/',
         start: '2016-01-03'
     },
     {
         title: 'Click for Google',
-        url: 'http://google.com/',
+        url: 'https://google.com/',
         start: '2016-01-22',
         end: '2016-01-23'
     },
     {
         id: 999,
         title: 'Repeating Event',
-        url: 'http://google.com/',
+        url: 'https://google.com/',
         start: '2016-01-23T16:00:00'
     },
     {
         id: 999,
         title: 'Repeating Event',
-        url: 'http://google.com/',
+        url: 'https://google.com/',
         start: '2016-01-23T16:00:00'
     },
     {
@@ -54,30 +54,30 @@ var calendarEvents= [
 
     {
         title: 'Click for Google',
-        url: 'http://google.com/',
+        url: 'https://google.com/',
         start: '2016-02-02'
     },
     {
         title: 'Click for Google',
-        url: 'http://google.com/',
+        url: 'https://google.com/',
         start: '2016-02-04'
     },
     {
         title: 'Click for Google',
-        url: 'http://google.com/',
+        url: 'https://google.com/',
         start: '2016-02-22',
         end: '2016-02-23'
     },
     {
         id: 999,
         title: 'Repeating Event',
-        url: 'http://google.com/',
+        url: 'https://google.com/',
         start: '2016-02-23T16:00:00'
     },
     {
         id: 999,
         title: 'Repeating Event',
-        url: 'http://google.com/',
+        url: 'https://google.com/',
         start: '2016-02-23T16:00:00'
     },
     {
@@ -107,30 +107,30 @@ var calendarEvents= [
 
     {
         title: 'Click for Google',
-        url: 'http://google.com/',
+        url: 'https://google.com/',
         start: '2016-03-01'
     },
     {
         title: 'Click for Google',
-        url: 'http://google.com/',
+        url: 'https://google.com/',
         start: '2016-03-02'
     },
     {
         title: 'Click for Google',
-        url: 'http://google.com/',
+        url: 'https://google.com/',
         start: '2016-03-21',
         end: '2016-03-22'
     },
     {
         id: 999,
         title: 'Repeating Event',
-        url: 'http://google.com/',
+        url: 'https://google.com/',
         start: '2016-03-23T16:00:00'
     },
     {
         id: 999,
         title: 'Repeating Event',
-        url: 'http://google.com/',
+        url: 'https://google.com/',
         start: '2016-03-23T16:00:00'
     },
     {
