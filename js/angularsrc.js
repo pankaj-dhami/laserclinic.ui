@@ -1,5 +1,5 @@
 (function () {
-    var app = angular.module("laserclinic", []);
+    var app = angular.module("laserclinic", ["ngAlertify"]);
     app.filter('truncate', function () {
         return function (text, length, end) {
             if (isNaN(length))
