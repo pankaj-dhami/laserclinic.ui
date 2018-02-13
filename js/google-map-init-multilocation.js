@@ -10,10 +10,10 @@ function initialize() {
     // Info Window Content
     var infoWindowContent = [
         ['<div class="info_content">' +
-        '<h3>DLF Sector 86 center.</h3>' +
+        '<h3>DLF Sector 86 Clinic.</h3>' +
         '<p>A-172 DLF NTH ,Sector 86 Gurgaon,Haryana.</p>' +        '</div>'],
         ['<div class="info_content">' +
-        '<h3>New Palam Viahr Center.</h3>' +
+        '<h3>New Palam Viahr Clinic.</h3>' +
         '<p>E-199 New Palam Vihar Phase -2, Gurgaon,Haryana.</p>' +
         '</div>'],
         ['<div class="info_content">' +

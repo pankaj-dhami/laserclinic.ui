@@ -58,8 +58,96 @@
 <![endif]-->
 </head>
 
-<body ng-app="laserclinic" ng-controller="indexController" class="">
-    <div id="wrapper">
+<body ng-app="laserclinic" ng-controller="indexController" class="has-side-panel side-panel-right fullwidth-page side-push-panel">
+    <div class="body-overlay"></div>
+    <div id="side-panel" class="dark" data-bg-img="images/custom/bg6.jpg">
+        <div class="side-panel-wrap">
+            <div id="side-panel-trigger-close" class="side-panel-trigger">
+                <a href="#">
+                    <i class="icon_close font-30"></i>
+                </a>
+            </div>
+            <a href="javascript:void(0)">
+                <img alt="logo" src="images/apple-touch-icon-72x72.png">
+                <span>
+                    <strong>Lasaer Esthetics</strong>
+                </span>
+            </a>
+            <div class="side-panel-nav mt-30">
+                <div class="widget no-border">
+                    <nav>
+                        <ul class="nav nav-list">
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">Services</a>
+                            </li>
+                            <li>
+                                <a class="tree-toggler nav-header">Pages
+                                    <i class="fa fa-angle-down"></i>
+                                </a>
+                                <ul class="nav nav-list tree">
+                                    <li>
+                                        <a href="#">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Terms</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">FAQ</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="side-panel-widget mt-30">
+                <div class="widget no-border">
+                    <ul>
+                        <li class="font-14 mb-5">
+                            <i class="fa fa-phone text-theme-colored"></i>
+                            <a href="#" class="text-gray">+91 9717721011</a>
+                        </li>
+                        <li class="font-14 mb-5">
+                            <i class="fa fa-clock-o text-theme-colored"></i> Mon-Fri 9:00 to 20:00 </li>
+                        <li class="font-14 mb-5">
+                            <i class="fa fa-clock-o text-theme-colored"></i> Sat-Sun 10:00 to 18:00 </li>
+                        <li class="font-14 mb-5">
+                            <i class="fa fa-envelope-o text-theme-colored"></i>
+                            <a href="#" class="text-gray">laseresthetics01@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="widget">
+                    <ul class="social-icons icon-dark icon-theme-colored icon-sm">
+                        <li>
+                            <a href="https://plus.google.com/u/0/110297521736108081070">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/laserestheticsin">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <p>Copyright &copy;2018 Laser Esthetics. All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+    <div id="wrapper" class="clearfix">
         <!-- preloader -->
         <div id="preloader">
             <div id="spinner">
@@ -67,7 +155,6 @@
             </div>
             <div id="disable-preloader" class="btn btn-default btn-sm">Disable Preloader</div>
         </div>
-
         <!-- Header -->
         <header id="header" class="header">
             <div class="header-top bg-theme-colored sm-text-center">
@@ -137,7 +224,7 @@
                                 </a>
                             </div>
                             <ul class="menuzord-menu">
-                                <li>
+                                <li >
                                     <a href="index.html">Home</a>
                                 </li>
                                 <li>
@@ -353,8 +440,9 @@
                 </div>
             </div>
         </header>
+   <!-- end common layout content -->
 
-        <!-- Start main-content -->
+   <!-- Start main-content -->
         <div class="main-content">
             <!-- Section: inner-header -->
             <section class="inner-header divider layer-overlay overlay-deep" data-bg-img="images/custom/bg5.jpg">
@@ -378,26 +466,6 @@
 
             <!-- Start main-content -->
             <div class="main-content">
-                <!-- Section: inner-header -->
-                <section class="inner-header divider parallax layer-overlay overlay-white-8" data-bg-img="images/custom/bg14.jpg">
-                    <div class="container pt-90 pb-50">
-                        <!-- Section Content -->
-                        <div class="section-content">
-                            <div class="row">
-                                <div class="col-md-12 text-center">
-                                    <h2 class="title">Contact</h2>
-                                    <ol class="breadcrumb white mt-10">
-                                        <li>
-                                            <a href="#">Home</a>
-                                        </li>
-                                        <li class="active text-theme-colored">Contact us</li>
-                                    </ol>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
                 <!-- Divider: Contact -->
                 <section class="divider">
                     <div class="container">
@@ -649,7 +717,7 @@
                                         </a>
                                         <div class="post-right">
                                             <h5 class="post-title mt-0 mb-5">
-                                                <a href="{{item.link}}" target="_blank">{{item.name | truncate : 45}}</a>
+                                                <a href="{{item.link}}" target="_blank">{{item.name | truncate : 35}}</a>
                                             </h5>
                                             <p class="post-date mb-0 font-12">{{item.created_time | date : 'fullDate'}}</p>
                                         </div>
